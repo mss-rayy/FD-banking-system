@@ -15,15 +15,7 @@ public class Customer {
     private String gender;
     private Boolean isDeleted;
 
-    public Customer(){
-       this.uuid = UUID.randomUUID();
-       this.fullName = "Dara";
-       this.email = "dara@gmail.com";
-       this.phone = "098345678";
-       this.gender = "Male";
-       this.isDeleted = false;
-
-    }
+    public Customer(){};
 
     public Customer(UUID uuid, String fullName, String email, String phone, String gender, Boolean isDeleted) {
         this.uuid = uuid;
