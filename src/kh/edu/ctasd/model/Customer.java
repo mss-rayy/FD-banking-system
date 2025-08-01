@@ -8,7 +8,7 @@ import java.util.UUID;
 // POJO CLASS : Plain old java object
 // setter/getter/constructure
 public class Customer {
-    private UUID uuid;
+    private String uuid;
     private String fullName;
     private String email;
     private String phone;
@@ -17,7 +17,7 @@ public class Customer {
 
     public Customer(){};
 
-    public Customer(UUID uuid, String fullName, String email, String phone, String gender, Boolean isDeleted) {
+    public Customer(String uuid, String fullName, String email, String phone, String gender, Boolean isDeleted) {
         this.uuid = uuid;
         this.fullName = fullName;
         this.email = email;
@@ -26,11 +26,11 @@ public class Customer {
         this.isDeleted = isDeleted;
     }
 
-    public UUID getUuid() {
+    public String getUuid() {
         return uuid;
     }
 
-    public void setId(UUID uuid) {
+    public void setId(String uuid) {
         this.uuid = uuid;
     }
 

@@ -18,7 +18,7 @@ public class CustomerRepository {
 
         Customer customer = new Customer();
 
-        customer.setId(UUID.randomUUID());
+        customer.setId(UUID.randomUUID().toString());
         customer.setFullName("Seyha");
         customer.setEmail("seyha@gamil.com");
         customer.setPhone("078234567");
@@ -26,7 +26,7 @@ public class CustomerRepository {
         customer.setDeleted(false);
 
         Customer customer2 = new Customer();
-        customer2.setId(UUID.randomUUID());
+        customer2.setId(UUID.randomUUID().toString());
         customer2.setFullName("Endy");
         customer2.setEmail("endy@gamil.com");
         customer2.setPhone("09723456");
