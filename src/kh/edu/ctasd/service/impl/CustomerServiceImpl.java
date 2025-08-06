@@ -23,7 +23,6 @@ public class CustomerServiceImpl implements CustomerService {
         List<Customer> customers = customerRepository.getCustomerData();
 
 //        Domain MODEL => DTO
-
         return customers.stream()
                 .map(
                         (customer -> new CustomerResponse(
@@ -36,19 +35,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerResponse findCustomerByEmail(String email) {
-        //logic
-        List<Customer> customers =  customerRepository.getCustomerData();
-
-        Customer foundCustomer = customers.stream()
-                .filter((customer -> customer.getEmail().equals(email)))
-                .findFirst()
-                .orElseThrow(()-> new RuntimeException("Customer not found"));
-
+        Customer customer = customerRepository.getCustomerByEmail(email);
 //        Map data
         CustomerResponse customerResponse = new CustomerResponse(
-                foundCustomer.getFullName(),
-                foundCustomer.getEmail(),
-                foundCustomer.getGender()
+                customer.getFullName(),
+                customer.getEmail(),
+                customer.getGender()
         );
         return customerResponse;
     }
